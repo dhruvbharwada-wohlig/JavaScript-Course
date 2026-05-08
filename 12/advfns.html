@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Functions!!</title>
+</head>
+<body>
+  <script>
+      // function greeting(){
+      //   console.log('Hello ')
+      // }
+      // greeting();
+      // const fun1 = function (){
+      //   console.log('Hello2');
+      // }
+      // fun1(); 
+      // console.log(typeof fun1);
+
+      // const obj = {
+      //   name : 'Dhruv',
+      //   fun : function(){
+      //     console.log('Hello3')
+      //   }
+      // }
+
+      // obj.fun();
+
+      // setTimeout(function(){
+      //   console.log('In time-out');
+      // } , 3000);
+
+      // console.log('immediate code exection');
+
+
+      // setInterval(function(){
+      //   console.log('In Interval');
+      // } , 3000);
+
+
+      ['dhruv','harsh','mishra','bharwada'].forEach(function(value , index ){
+        console.log(`index is ${index} and value is ${value}`);
+      })
+
+      //since i dont like harsh i want to skip it  --> kind of like continue loop 
+      ['dhruv','harsh','mishra','bharwada'].forEach(function(value , index ){
+        if(value === 'harsh'){
+          return;
+        }
+        console.log(`index is ${index} and value is ${value}`);
+      })
+  </script>
+</body>
+</html> 

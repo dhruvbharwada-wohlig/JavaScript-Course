@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+  <p> This is a calculator</p>
+
+  <button onclick="
+  add(1);
+  ">1</button>
+
+  <button onclick="
+  add(2);
+  ">2</button>
+
+  <button onclick="
+  add(3);
+  ">3</button>
+
+
+  <button onclick="
+  add('+');
+  ">+</button>
+
+  <button onclick="
+  console.log(eval(calc));
+  ">=</button>
+
+  <script>
+    let calc = '';
+    function add(n){
+      calc = calc + n;
+      console.log(calc)
+
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function unique(arr){
+      for(let i = 0; i < arr.length; i++){
+        for(let j = i + 1; j < arr.length; j++){
+          if(arr[i] === arr[j]){
+            arr.splice(j, 1);
+            j--;
+          }
+        }
+      }
+      return arr;
+    }
+
+
+
+    const arr = ['hello','world','good','morning','search'];
+    unique(arr);
+    let word = 'search';
+    function search(arr , word){
+      
+      let idx = 0;
+      for(let i = 0 ; i < arr.length;i++){
+        if(word === arr[i]){
+          idx = i ;
+          return;
+        }
+      }
+      return idx;
+    }
+    let ans = search(arr,word);
+    console.log(ans);
+
+
+    const food = ['egg','egg','fruits','veges','meal','egg','rice','egg'];
+    
+
+    function removeEgg(arr,k){
+
+      let count =0;
+      for(let i =0; i<arr.length;i++){
+        if((arr[i] === 'egg')){
+          arr.splice(i,1);
+          i--;
+          count++;
+          if(count === k){
+            return;
+          }
+        }
+      }
+    }
+    food.reverse();
+    removeEgg(food,2);
+    console.log(food);
+
+
+  </script>
+</body>
+</html>

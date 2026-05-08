@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //11a
+    const nums = [ 10 , 30 , 40];
+    nums[2] = 100;
+
+    console.log(nums);
+    function getLastValue(nums){
+      return nums[nums.length-1];
+    }
+
+    let val = getLastValue(nums);
+    console.log(val);
+
+    function swapFirstLast(nums){
+      let temp = nums[0];
+      nums [0] = nums[nums.length -1];
+      nums[nums.length -1] = temp;
+    }
+
+    swapFirstLast(nums);
+    console.log(nums);
+
+
+    let arr = [];
+    for(let i = 0 ; i < 6 ; i++){
+      arr[i] = i *2
+    }
+    console.log(arr);
+
+    for(let i = 5 ; i >= 0 ;i++){
+      console.log(i);
+    }
+    
+  </script>
+</body>
+</html>

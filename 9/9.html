@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <button class="js-9a"> 9a</button>
+  <button class="js-9b">9b</button>
+
+  <br>
+  <br>
+  <button class="js-heads" onclick="
+    clickText('heads');
+  ">heads</button>
+  <button class="js-tails" onclick="
+    clickText('tails');
+  ">tails</button>
+  
+  <p class="result-print"></p>
+
+
+  <script>
+    let result = '';
+    document.querySelector('.js-9b').innerHTML = '9b done!';
+    function clickText(move){
+      document.querySelector('.result-print').innerHTML = `You chose : ${move}`;
+    }
+  </script>
+</body>
+</html>

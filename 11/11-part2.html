@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let num = [1 ,2 ,3]
+    for(let i =0; i<num.length ; i++){
+      num[i] = num[i]+1;
+    }
+    console.log(num);
+
+    let ans = '';
+    function minMax(nums){
+      if(nums.length === 0){
+        ans = 'min :  null , max : null';
+        return ;
+      }
+      if(nums.length === 1){
+        ans = `min : ${nums[0]} , max : ${nums[0]}`;
+        return ;
+      }
+      let max = -100000;
+      let min = 100000;
+      for(let i = 0 ; i < nums.length ; i++){
+        if(nums[i]>max){
+          max = nums[i];
+        }
+
+        if(nums[i]<min){
+          min = nums[i];
+        }
+
+        ans = `min : ${min} , max : ${max}`;
+      }
+      console.log(ans);
+
+    }
+    minMax(num);
+
+
+
+
+    let words = ['apple','apple','pineapple','apple','apple','pineapple','orange','pineapple','orange']
+
+
+    function countWords(words){
+      let ansObj = {};
+      for(let i = 0 ;i<words.length;i++){
+        let word = words[i];
+        if(ansObj[word]){
+          ansObj[word]++;
+        }
+        else{
+          ansObj[word] = 1;
+        }
+        
+      }
+      return ansObj;
+    }
+
+    let ans1 = countWords(words);
+    console.log(ans1);
+
+
+    
+  </script>
+</body>
+</html>

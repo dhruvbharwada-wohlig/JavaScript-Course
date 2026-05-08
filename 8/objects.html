@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+
+    console.log(localStorage.getItem('message'));
+    const product = {
+      name : 'socks' ,
+      price : 1000
+    };
+    
+    console.log(product);
+    console.log(product.name);
+    console.log(product.price);
+    
+    product.name = 'cotton sucks';
+    console.log(product);
+
+    product.newProperty = true;
+    console.log(product);
+
+    delete product.newProperty;
+    console.log(typeof product);
+
+
+    const product2 ={
+      name : 'tshirt',
+      rating : {
+        stars : 5,
+        ratings : 20,
+        count : 34
+      },
+      fun : function function1(){
+        console.log('Function inside object')
+      }
+       
+    }
+    console.log(product2['name']),
+    console.log(product2['brand'])
+    console.log(product2.rating.count);
+    console.log(product2.fun());
+
+    console.log(JSON.stringify(product2));
+    
+    console.log(JSON.parse(JSON.stringify(product2)));
+
+    localStorage.setItem('message','hello');
+
+  </script>
+
+
+</body>
+</html>
