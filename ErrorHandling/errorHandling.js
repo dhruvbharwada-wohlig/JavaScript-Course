@@ -1,5 +1,4 @@
 //try catch 
-console.log("----- TRY CATCH EXAMPLE -----");
 try {
   let data = JSON.parse("hello");
   console.log(data);
@@ -10,7 +9,6 @@ catch (error) {
 }
 
 //error handling in promises
-console.log("----- PROMISE ERROR HANDLING -----");
 const fakePromise = new Promise((resolve, reject) => {
   let serverWorking = false;
   if (serverWorking) {
@@ -29,7 +27,6 @@ fakePromise
   });
 
 //error handling with async await 
-console.log("----- ASYNC AWAIT ERROR HANDLING -----");
 async function fetchData() {
   try {
     const response = await fetch(
@@ -45,7 +42,6 @@ async function fetchData() {
 fetchData();
 
 //custom error messages
-console.log("----- CUSTOM ERROR -----");
 try {
   let age = -5;
   if (age < 0) {
@@ -60,7 +56,6 @@ try {
 }
 
 //final block implimentation
-console.log("----- FINALLY BLOCK -----");
 try {
   console.log("Trying code");
   throw new Error("Something failed");
